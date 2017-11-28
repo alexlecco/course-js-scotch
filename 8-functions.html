@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>8 functions</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+        body {
+            padding: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="jumbotron text-center">
+        <button type="button" class="btn btn-danger" onClick="saySomething('FIRST button')">
+            FIRST Button
+        </button>
+        <button type="button" class="btn btn-danger" onClick="saySomething('SECOND button')">
+            SECOND Button
+        </button>
+    </div>
+
+    <script>
+        function saySomething(message = 'goodbye', whisper = false)  {
+            if(whisper) {
+                console.log(`%c${message}`, 'font-size:5px');
+            } else {
+                console.log(message);
+            }
+        }
+
+        saySomething();
+        saySomething('hello', true);
+        saySomething();
+
+        // function squared(a) {
+        //   return a * a;
+        // }
+        // console.log(squared(3));
+
+        // const squared = function(a) {
+        //   return a * a;
+        // }
+        const squared = (a) => {
+          return a * a;
+        }
+        const otherSquared = squared;
+
+        punch();
+
+        function punch() {
+          console.log('punch here!');
+        }
+    </script>
+</body>
+
+</html>
